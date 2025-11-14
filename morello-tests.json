@@ -1176,7 +1176,7 @@
         "app": "${build}/getauxptrcheri-${kind}.exe",
         "name": "at-cheri-auxv",
         "xrc": [0],
-        "skip": ["morello", "fvp"]
+        "skip": ["morello", "fvp", "riscv"]
     },
     {
         "app": "${build}/mainargv-${kind}.exe",
@@ -2008,7 +2008,7 @@
         "app": "${build}/checksealed-${kind}.exe",
         "name": "check-sealed-funcs",
         "xrc": [0],
-        "skip": []
+        "skip": ["riscv"]
     },
     {
         "app": "${build}/ftw-${kind}.exe",
@@ -2661,7 +2661,8 @@
     {
         "app": "${build}/cmpt-blrs-${kind}.exe",
         "name": "cmpt-blrs",
-        "xrc": [0]
+        "xrc": [0],
+        "skip": ["riscv"]
     },
     {
         "app": "${build}/timer-sigev-${kind}.exe",
@@ -2673,7 +2674,8 @@
     {
         "app": "${build}/cmpt-${kind}.exe",
         "name": "cmpt",
-        "xrc": [0]
+        "xrc": [0],
+        "skip": ["riscv"]
     },
     {
         "app": "${build}/wchar_fileio-${kind}.exe",
@@ -2698,6 +2700,7 @@
         "app": "${build}/cmpt-xor-${kind}.exe",
         "name": "cmpt-xor",
         "xrc": [0],
+        "skip": ["riscv"],
         "stdin": "1"
     },
     {
