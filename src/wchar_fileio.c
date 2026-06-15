@@ -36,7 +36,7 @@ int wchar_file(void)
 	wint_t read_char;
 	wchar_t write_char = L'ç';
 
-	if(create_temp_directory("morello-musl-tests-wchar/", DIR_PATH) != 0)
+	if(create_temp_directory("musl-tests-wchar/", DIR_PATH) != 0)
 	{
 		fprintf(stderr, "Failed to create temporary directory.\n");
 		return 1;
@@ -110,7 +110,7 @@ int wstr_file(void)
 	wchar_t read_wstr[10];
 	wchar_t* write_wstr = L"française";
 
-	if(create_temp_directory("morello-musl-tests-wchar/", DIR_PATH) != 0)
+	if(create_temp_directory("musl-tests-wchar/", DIR_PATH) != 0)
 	{
 		fprintf(stderr, "Failed to create temporary directory.\n");
 		return 1;

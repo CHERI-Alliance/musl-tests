@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
     list = malloc(10 * sizeof(struct aiocb *));
 
-    if (create_temp_directory("morello-musl-tests-aio/", DIR_PATH) != 0)
+    if (create_temp_directory("musl-tests-aio/", DIR_PATH) != 0)
     {
         fprintf(stderr, "Failed to create temporary directory.\n");
         return -1;

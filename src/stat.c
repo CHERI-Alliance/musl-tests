@@ -20,7 +20,7 @@ mode_t mode = 0666;
 int main(int argc, char **argv) {
   if (argc < 2) return -1;
 
-  if (create_temp_directory("morello-musl-tests-stat/", DIR_PATH) != 0)
+  if (create_temp_directory("musl-tests-stat/", DIR_PATH) != 0)
     return -1;
 
   switch (argv[1][0]) {

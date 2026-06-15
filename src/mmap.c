@@ -55,7 +55,7 @@ int test_mmap_offset(void) {
 	char directory_buffer[PATH_MAX];
 	char filename_buffer[PATH_MAX];
 
-	if(create_temp_directory("morello-musl-tests-mmap/", &directory_buffer[0]) != 0)
+	if(create_temp_directory("musl-tests-mmap/", &directory_buffer[0]) != 0)
 		return -1;
 
 	char *filename = create_temp_file(&directory_buffer[0], "mmap_offset_XXXXXX", &filename_buffer[0]);

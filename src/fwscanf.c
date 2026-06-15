@@ -19,7 +19,7 @@ static void try_write(wchar_t* input_ptr, FILE* fp)
 
 int main (int argc, char *argv[])
 {
-    if (create_temp_directory("morello-musl-tests-fwscanf/", DIR_PATH) != 0)
+    if (create_temp_directory("musl-tests-fwscanf/", DIR_PATH) != 0)
     {
         fprintf(stderr, "Failed to create temp directory.\n");
         return -1;

@@ -85,7 +85,7 @@ int parent(int testCase)
     }
 
     char filename_buffer[PATH_MAX];
-    if (0 != create_temp_directory("morello-musl-tests-posix/", &filename_buffer[0]))
+    if (0 != create_temp_directory("musl-tests-posix/", &filename_buffer[0]))
         return 20;
     char* filename = strncat(&filename_buffer[0], "posix-spawn-test.txt", PATH_MAX);
 
