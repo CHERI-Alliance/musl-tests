@@ -1,0 +1,12 @@
+yci-mr:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  variables:
+    TRIGGER_ONLY_CI: "true"
+    YCI_EXTRA_LOCAL_CONF: |
+      CODASIP_GIT_MUSL_TESTS_REPO = "${CI_SERVER_HOST}/${CI_PROJECT_PATH}"
+      CODASIP_GIT_MUSL_TESTS_BRANCH = "refs/merge-requests/${CI_MERGE_REQUEST_IID}/merge;nobranch=1"
+  trigger:
+    project: cheri/software/cherilinux/yocto/yocto-ci
+    strategy: depend
