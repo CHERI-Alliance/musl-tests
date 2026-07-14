@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   strcpy(str, "can we ");
   switch (argv[1][0]) {
   case '0':
-    return do_strlcat_test(str, "copy a string shorter than n? yes!", 100,
+    return do_strlcat_test(str, "copy a string shorter than n? yes!", 50,
                            "can we copy a string shorter than n? yes!", 41);
   case '1':
     return do_strlcat_test(str, "copy a string longer than n? no we can't", 39,
