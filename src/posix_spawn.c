@@ -50,6 +50,8 @@ int parent(int testCase)
     posix_spawn_file_actions_t fileactions;
     sigset_t mask;
 
+    sigemptyset(&mask);
+
     status = posix_spawnattr_init(&spawnattr);
     CHECK_LAST_CALL(status, "posix_spawnattr_init", 1);
 
