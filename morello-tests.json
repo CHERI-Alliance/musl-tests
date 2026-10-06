@@ -1176,7 +1176,7 @@
         "app": "${build}/getauxptrcheri-${kind}.exe",
         "name": "at-cheri-auxv",
         "xrc": [0],
-        "skip": ["morello", "fvp", "riscv"]
+        "skip": ["morello", "fvp"]
     },
     {
         "app": "${build}/mainargv-${kind}.exe",

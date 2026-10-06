@@ -17,6 +17,10 @@
 
 static const unsigned long READ_CAP_PERMS =
 #if defined(__riscv_zcheripurecap)
+#if defined(__riscv_zcherilevels)
+							__CHERI_CAP_PERMISSION_ELEVATE_LEVEL__ |
+							__CHERI_CAP_PERMISSION_CAPABILITY_LEVEL__ |
+#endif
 							__CHERI_CAP_PERMISSION_READ__ |
 							__CHERI_CAP_PERMISSION_CAPABILITY__ |
 							__CHERI_CAP_PERMISSION_LOAD_MUTABLE__;
@@ -32,6 +36,7 @@ static unsigned long WRITE_CAP_PERMS =
 #if defined(__riscv_zcheripurecap)
 #if defined(__riscv_zcherilevels)
 							__CHERI_CAP_PERMISSION_STORE_LEVEL__ |
+							__CHERI_CAP_PERMISSION_CAPABILITY_LEVEL__ |
 #endif
 							__CHERI_CAP_PERMISSION_WRITE__ |
 							__CHERI_CAP_PERMISSION_CAPABILITY__;
